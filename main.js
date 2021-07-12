@@ -143,7 +143,7 @@ function MoveUp(){
 }
 
 function MoveRight(){
-    if(player_x < 750){
+    if(player_x < 800){
     player_x = player_x + block_image_width;
     canvas.remove(player_object);
     player_update();
@@ -156,5 +156,9 @@ function Down(){
     canvas.remove(player_object);
     player_update();
     }
+}
+
+function info(){
+    window.alert("r = redstone, w = brick, y = yellowstone, g = dirt, l = light grass, u = gold,d = dark grass, c = stone");
 }
 
