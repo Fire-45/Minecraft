@@ -83,6 +83,11 @@ function my_keydown(e){
         console.log("u");
     }
 
+    if(keyPressed == '69'){
+        block_update("Eraser.png");
+        console.log("e");
+    }
+
     if(e.shiftKey == true && keyPressed == '80'){
         block_image_width = block_image_width + 10;
         block_image_height = block_image_height + 10;
@@ -120,3 +125,36 @@ function my_keydown(e){
     }
 
 }
+
+function Left(){
+    if(player_x > 0){
+    player_x = player_x - block_image_width;
+    canvas.remove(player_object);
+    player_update();
+    }
+}
+
+function MoveUp(){
+    if(player_y > 0){
+    player_y = player_y - block_image_height;
+    canvas.remove(player_object);
+    player_update();
+    }
+}
+
+function MoveRight(){
+    if(player_x < 750){
+    player_x = player_x + block_image_width;
+    canvas.remove(player_object);
+    player_update();
+    }
+}
+
+function Down(){
+    if(player_y < 400){
+    player_y = player_y + block_image_height;
+    canvas.remove(player_object);
+    player_update();
+    }
+}
+
